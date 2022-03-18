@@ -18,8 +18,10 @@ Run “npm install” in the terminal after cloning Github repository.
 
 ## Usage
 To use this app, type the following in the terminal via the server.js file:
-- xx
-- xx
+
+`- npm run seed`
+
+`- npm start`
   
 #### [Full video here]()
 
