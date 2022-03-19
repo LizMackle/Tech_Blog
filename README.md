@@ -1,5 +1,5 @@
 # 14 - MVC: Tech Blog📃
-![License](https://img.shields.io/badge/License-MIT-red)
+![License](https://img.shields.io/badge/License-MIT-red?style=for-the-badge&logo)
 
 ## Description
 A CMS-style blog site similar to a Wordpress site, where developers can publish their articles, blog posts, thoughts and opinions as well as commenting on others too. 
