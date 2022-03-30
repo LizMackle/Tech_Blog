@@ -1,9 +1,9 @@
 # 14 - MVC: Tech Blog📃
-![License](https://img.shields.io/badge/License-MIT-red?style=for-the-badge&logo)
+<a href="https://tech-blog-lm8.herokuapp.com/">![Deployed App](https://img.shields.io/badge/-Deployed-success?style=for-the-badge)</a> ![License](https://img.shields.io/badge/License-MIT-red?style=for-the-badge&logo) ![Top language](https://img.shields.io/github/languages/top/lizmackle/tech_blog?style=for-the-badge&logo) ![Repo Size](https://img.shields.io/github/repo-size/lizmackle/tech_blog?color=yellow&style=for-the-badge)
 
 ## Description
 A CMS-style blog site similar to a Wordpress site, where developers can publish their articles, blog posts, thoughts and opinions as well as commenting on others too. 
-
+s
 ## Table of Contents
   - [Description](#description)
   - [Installation](#installation)
@@ -14,16 +14,28 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
   - [Questions](#questions)
 
 ## Installation
-Run “npm install” in the terminal after cloning Github repository.
+Clone the Github repository:<br>
+`https://github.com/LizMackle/Tech_Blog.git`
 
-## Usage
-To use this app, type the following in the terminal via the server.js file:
-
-`- npm run seed`
-
-`- npm start`
+Install all dependencies required for application:<br>
+`npm install` 
   
-#### [Full video here]()
+## Usage
+To use this app, use the following commands:
+
+Log into MySQL & enter your password<br>
+`mysql -u root -p`
+
+Source the schema<br>
+`source schema.sql`
+
+Seed the database<br>
+`npm run seed`
+
+Start the server<br>
+`npm start`
+  
+### [Deployed Link]()
 
 ## Contribution
 Please feel free to contribute in any way by forking the repo and creating a pull request.
