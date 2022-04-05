@@ -51,26 +51,26 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
-  User.create({
-    username: req.body.username,
-    password: req.body.password,
-  })
+// router.post('/', (req, res) => {
+//   User.create({
+//     username: req.body.username,
+//     password: req.body.password,
+//   })
 
-    .then((dbUserData) => {
-      req.session.save(() => {
-        req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
-        req.session.loggedIn = true;
+//     .then((dbUserData) => {
+//       req.session.save(() => {
+//         req.session.user_id = dbUserData.id;
+//         req.session.username = dbUserData.username;
+//         req.session.loggedIn = true;
 
-        res.json(dbUserData);
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+//         res.json(dbUserData);
+//       });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 router.post('/login', (req, res) => {
   User.findOne({
@@ -101,6 +101,33 @@ router.post('/login', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
+router.post('/signup', async (req, res) => {
+  try {
+    const signupData = await User.create(req.body);
+
+    if (!signupData) {
+      res
+        .status(409)
+        .json({ message: 'There is already an account for this email.' });
+      return;
+    }
+
+    const userData = await User.findOne({
+      where: { username: req.body.username },
+    });
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.username = userData.username;
+      req.session.logged_in = true;
+
+      res.json({ user: userData, message: 'You are now logged in!' });
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 router.post('/logout', (req, res) => {

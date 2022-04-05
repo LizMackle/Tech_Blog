@@ -1,0 +1,36 @@
+<section class="vh-75">
+  <div class="container py-5 h-75">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <form id="signup-form">
+        <div class="card text-dark border border-dark" style="background-color: #ddb38c">
+          <div class="card-body p-5 text-center">
+            <div class="mb-md-5 mt-md-2">
+              <h2 class="fw-bold mb-2 text-uppercase">Sign Up</h2>
+              <p class="text-white mb-5">Please enter your details to sign up!</p>
+              <div class="form-floating mb-4 text-dark">
+                <input type="text" class="form-control" id="username-signup" placeholder="JaneDoe21">
+                <label for="username">Username</label>
+              </div>
+              {{!-- <div class="form-floating mb-4 text-dark">
+                <input type="email" class="form-control" id="email-signup" placeholder="name@example.com">
+                <label for="email-signup">Email address</label>
+              </div> --}}
+              <div class="form-floating mb-4 text-dark">
+                <input type="password" class="form-control" id="password-signup" placeholder="Password">
+                <label for="password-signup">Password</label>
+              </div>
+              <button type="submit" id="signup-btn" class="btn btn-outline-dark btn-md px-5" >SIGN UP</button>
+            </div>
+            <div>
+              <p class="mb-0">Have an account? <a href="/login" class="text-white fw-bold">Log In</a></p>
+            </div>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="./js/sign-up.js"></script>

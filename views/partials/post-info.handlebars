@@ -1,0 +1,12 @@
+<article class="post">
+  <div class="container mt-3">
+      <div class="p-2 text-black" style="background-color: #f7f0e2">
+           <h4 class="fw-bolder card-title text-center"><a class="text-black text-uppercase text-decoration-none" href="/post/{{id}}" target="_blank">{{title}}</a></h4>
+            <h6 class="text-end text-center">Created by {{user.username}} on {{format_date created_at}}</h6>
+        </div>
+      <div class="card-body text-center border border-black">  
+        <p class="card-text">{{content}}</p>
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+      </div>
+  </div>
+</article>

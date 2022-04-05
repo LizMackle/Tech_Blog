@@ -1,6 +1,6 @@
 const sequelize = require('../config/connection');
-const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
+const router = require('express').Router();
 
 router.get('/', (req, res) => {
   Post.findAll({
@@ -32,14 +32,19 @@ router.get('/', (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
   }
   res.render('login');
 });
 
 router.get('/signup', (req, res) => {
-  res.render('signup');
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('signup', { logged_in: req.session.logged_in });
 });
 
 router.get('/post/:id', (req, res) => {
