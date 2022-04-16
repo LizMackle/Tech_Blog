@@ -1,14 +1,14 @@
 <div class="container d-flex flex-column justify-content-center">
   {{> post-info post}}
-  {{#if loggedIn}}
+  {{#if logged_in}}
   <div class="text-center mt-3">
-    <h2>Add a Comment</h2>
+    <h4>Add a Comment</h4>
     <form class="comment-form">
       <div class="form-group">
-        <textarea class="form-control" name="comment-body"></textarea>
+        <textarea class="form-control" name="comment-text"></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary mt-3">Add comment</button>
+        <button type="submit" class="btn btn-outline-dark btn-md px-4 mt-4">Add comment</button>
       </div>
     </form>
   </div>
@@ -17,6 +17,6 @@
   {{> comments post.comments}}
 </div>
 
-{{#if loggedIn}}
-<script src="./js/comment.js"></script>
+{{#if logged_in}}
+<script src="/js/comment.js"></script>
 {{/if}}
