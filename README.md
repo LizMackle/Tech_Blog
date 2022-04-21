@@ -37,6 +37,7 @@ Start the server<br>
   
 ### [Deployed Link]()
 
+![Full mock up](https://user-images.githubusercontent.com/93589073/164407498-a4836d8a-0284-4993-9ff4-a76b1a31e20d.jpg)git re
 ## Contribution
 Please feel free to contribute in any way by forking the repo and creating a pull request.
 
