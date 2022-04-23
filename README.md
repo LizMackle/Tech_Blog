@@ -35,7 +35,7 @@ Seed the database<br>
 Start the server<br>
 `npm start`
   
-### [Deployed Link]()
+### [Deployed Link](https://tech-blog-lm8.herokuapp.com/)
 
 ![Full mock up](https://user-images.githubusercontent.com/93589073/164407498-a4836d8a-0284-4993-9ff4-a76b1a31e20d.jpg)
 ## Contribution
